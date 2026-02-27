@@ -697,6 +697,7 @@ img {
 }
 
 .filter-btn {
+  cursor : pointer;
   width: 80px;
   height: 80px;
   padding: 0;
@@ -709,6 +710,12 @@ img {
   transition: var(--transition);
   overflow: hidden;
   position: relative;
+}
+
+.filter-btn span {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .filter-btn img {
@@ -761,6 +768,7 @@ img {
 .filter-btn.active + span {
   color: var(--olive);
 }
+
 /* Subcategory Filters */
 .sub-filters {
   display: flex;
@@ -1198,4 +1206,5 @@ img {
   white-space: nowrap;
   border: 0;
 }
+
 
