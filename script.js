@@ -1,0 +1,598 @@
+// ==================== DATA ====================
+const categories = [
+  { name: 'Clothing', subcategories: ['Dresses', 'Knitwear', 'Blouses', 'Outerwear'] },
+  { name: 'Shoes', subcategories: ['Sandals', 'Boots', 'Sneakers', 'Heels'] },
+  { name: 'Jewelry', subcategories: ['Rings', 'Necklaces', 'Earrings', 'Bracelets'] },
+  { name: 'Handbags', subcategories: ['Crossbody', 'Totes', 'Mini Bags', 'Clutches'] }
+];
+
+const products = [
+  { id: 1, name: 'Silk Wrap Midi Dress', category: 'Clothing', subcategory: 'Dresses', price: 185, image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&fit=crop', affiliateUrl: 'https://google.com/' },
+  { id: 2, name: 'Cashmere Oversized Sweater', category: 'Clothing', subcategory: 'Knitwear', price: 210, image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 3, name: 'Linen Blend Blouse', category: 'Clothing', subcategory: 'Blouses', price: 125, image: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 4, name: 'Wool Blend Coat', category: 'Clothing', subcategory: 'Outerwear', price: 385, image: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 5, name: 'Leather Ankle Boots', category: 'Shoes', subcategory: 'Boots', price: 245, image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 6, name: 'Strappy Sandals', category: 'Shoes', subcategory: 'Sandals', price: 165, image: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 7, name: 'White Leather Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 195, image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 8, name: 'Pointed Toe Heels', category: 'Shoes', subcategory: 'Heels', price: 275, image: 'https://images.unsplash.com/photo-1515347619252-60a6bf4fffce?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 9, name: '14k Gold Hoop Earrings', category: 'Jewelry', subcategory: 'Earrings', price: 320, image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 10, name: 'Pearl Pendant Necklace', category: 'Jewelry', subcategory: 'Necklaces', price: 245, image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 11, name: 'Diamond Stacking Rings', category: 'Jewelry', subcategory: 'Rings', price: 450, image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 12, name: 'Gold Tennis Bracelet', category: 'Jewelry', subcategory: 'Bracelets', price: 380, image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 13, name: 'Structured Leather Tote', category: 'Handbags', subcategory: 'Totes', price: 450, image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 14, name: 'Crossbody Bag', category: 'Handbags', subcategory: 'Crossbody', price: 225, image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 15, name: 'Mini Leather Bag', category: 'Handbags', subcategory: 'Mini Bags', price: 185, image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  { id: 16, name: 'Evening Clutch', category: 'Handbags', subcategory: 'Clutches', price: 165, image: 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600&h=800&fit=crop', affiliateUrl: '#' }
+];
+
+// ==================== STATE ====================
+let activeCategory = 'All';
+let activeSubcategory = 'All';
+let cart = [];
+
+// ==================== DOM ELEMENTS ====================
+const categoryFilters = document.getElementById('categoryFilters');
+const subFilters = document.getElementById('subFilters');
+const productsGrid = document.getElementById('productsGrid');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuContent = document.getElementById('mobileMenuContent');
+const menuToggle = document.getElementById('menuToggle');
+const cartCount = document.getElementById('cartCount');
+const cartBtn = document.getElementById('cartBtn');
+const cartOverlay = document.getElementById('cartOverlay');
+const cartClose = document.getElementById('cartClose');
+const cartItems = document.getElementById('cartItems');
+const cartTotal = document.getElementById('cartTotal');
+const checkoutBtn = document.getElementById('checkoutBtn');
+const exploreBtn = document.getElementById('exploreBtn');
+const searchOverlay = document.getElementById('searchOverlay');
+const searchClose = document.getElementById('searchClose');
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+const searchBtn = document.querySelector('.search-btn');
+const newsletterForm = document.getElementById('newsletterForm');
+const newsletterEmail = document.getElementById('newsletterEmail');
+const newsletterMessage = document.getElementById('newsletterMessage');
+const newsletterBtn = document.getElementById('newsletterBtn');
+
+// ==================== INITIALIZE ====================
+function init() {
+  lucide.createIcons();
+  buildMobileMenu();
+  renderProducts();
+  setupEventListeners();
+  setupSearch();
+  setupCart();
+  setupNewsletter();
+}
+
+// ==================== NEWSLETTER FUNCTIONALITY ====================
+function setupNewsletter() {
+  if (!newsletterForm || !newsletterEmail || !newsletterMessage) return;
+
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const email = newsletterEmail.value.trim();
+    
+    // Validate email
+    if (!email) {
+      showNewsletterMessage('Please enter your email address.', 'error');
+      return;
+    }
+    
+    // Simple email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      showNewsletterMessage('Please enter a valid email address.', 'error');
+      return;
+    }
+    
+    // Show loading state
+    const originalBtnText = newsletterBtn.textContent;
+    newsletterBtn.textContent = 'Joining...';
+    newsletterBtn.disabled = true;
+    
+    // Simulate API call (in production, replace with actual API)
+    setTimeout(() => {
+      // Success
+      showNewsletterMessage('Welcome to ALIFF! You\'re now subscribed to our newsletter.', 'success');
+      newsletterEmail.value = '';
+      newsletterBtn.textContent = 'Joined!';
+      
+      // Reset button after 2 seconds
+      setTimeout(() => {
+        newsletterBtn.textContent = originalBtnText;
+        newsletterBtn.disabled = false;
+      }, 2000);
+    }, 1000);
+  });
+}
+
+function showNewsletterMessage(message, type) {
+  if (!newsletterMessage) return;
+  
+  newsletterMessage.textContent = message;
+  newsletterMessage.className = `newsletter-message ${type}`;
+  newsletterMessage.style.display = 'block';
+  
+  // Auto-hide after 5 seconds
+  setTimeout(() => {
+    newsletterMessage.style.display = 'none';
+  }, 5000);
+}
+
+// ==================== CART FUNCTIONALITY ====================
+function setupCart() {
+  // Open cart
+  if (cartBtn) {
+    cartBtn.addEventListener('click', () => {
+      cartOverlay.classList.add('open');
+    });
+  }
+
+  // Close cart
+  if (cartClose) {
+    cartClose.addEventListener('click', closeCart);
+  }
+
+  if (cartOverlay) {
+    cartOverlay.addEventListener('click', (e) => {
+      if (e.target === cartOverlay) {
+        closeCart();
+      }
+    });
+  }
+
+  // Checkout button
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+      }
+      alert('Thank you for your purchase!');
+      cart = [];
+      updateCartUI();
+      closeCart();
+    });
+  }
+}
+
+function closeCart() {
+  if (cartOverlay) {
+    cartOverlay.classList.remove('open');
+  }
+}
+
+function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+
+  const existingItem = cart.find(item => item.id === productId);
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      category: product.category,
+      subcategory: product.subcategory,
+      price: product.price,
+      image: product.image,
+      quantity: 1
+    });
+  }
+
+  updateCartUI();
+}
+
+function removeFromCart(productId) {
+  cart = cart.filter(item => item.id !== productId);
+  updateCartUI();
+}
+
+function updateCartUI() {
+  // Update cart count
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  if (cartCount) {
+    cartCount.textContent = totalItems;
+  }
+
+  // Update cart total
+  const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  if (cartTotal) {
+    cartTotal.textContent = `$${totalPrice}`;
+  }
+
+  // Render cart items
+  if (cartItems) {
+    if (cart.length === 0) {
+      cartItems.innerHTML = `
+        <div class="cart-empty">
+          <div class="cart-empty-icon">
+            <i data-lucide="shopping-bag" width="48" height="48"></i>
+          </div>
+          <p class="cart-empty-text">Your bag is empty</p>
+          <button class="cart-empty-btn" onclick="closeCart(); document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">
+            Start Shopping
+            <i data-lucide="arrow-right" width="16" height="16"></i>
+          </button>
+        </div>
+      `;
+    } else {
+      cartItems.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+          <div class="cart-item-info">
+            <h3 class="cart-item-name">${item.name}</h3>
+            <p class="cart-item-category">${item.category} · ${item.subcategory}</p>
+            <span class="cart-item-price">$${item.price} × ${item.quantity}</span>
+          </div>
+          <button class="cart-item-remove" onclick="removeFromCart(${item.id})" aria-label="Remove item">
+            <i data-lucide="trash-2" width="18" height="18"></i>
+          </button>
+        </div>
+      `).join('');
+    }
+    lucide.createIcons();
+  }
+}
+
+// ==================== SEARCH FUNCTIONALITY ====================
+function setupSearch() {
+  if (!searchBtn || !searchOverlay) return;
+  
+  // Open search overlay
+  searchBtn.addEventListener('click', () => {
+    searchOverlay.classList.add('open');
+    searchInput.focus();
+  });
+
+  // Close search overlay
+  if (searchClose) {
+    searchClose.addEventListener('click', closeSearch);
+  }
+  
+  if (searchOverlay) {
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) {
+        closeSearch();
+      }
+    });
+  }
+
+  // Search input handler
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      performSearch(query);
+    });
+  }
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('open')) {
+      closeSearch();
+    }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      if (searchOverlay) {
+        searchOverlay.classList.add('open');
+        searchInput.focus();
+      }
+    }
+  });
+}
+
+function closeSearch() {
+  if (searchOverlay) searchOverlay.classList.remove('open');
+  if (searchInput) searchInput.value = '';
+  if (searchResults) searchResults.innerHTML = '';
+}
+
+function performSearch(query) {
+  if (!query || !searchResults) {
+    if (searchResults) searchResults.innerHTML = '';
+    return;
+  }
+
+  const results = products.filter(p => 
+    p.name.toLowerCase().includes(query) ||
+    p.category.toLowerCase().includes(query) ||
+    p.subcategory.toLowerCase().includes(query)
+  );
+
+  if (results.length === 0) {
+    searchResults.innerHTML = `
+      <div class="search-no-results">
+        <p>No products found for "${query}"</p>
+      </div>
+    `;
+    return;
+  }
+
+  searchResults.innerHTML = results.map(product => `
+    <div class="search-result-item" onclick="selectSearchProduct('${product.category}', '${product.subcategory}')">
+      <img src="${product.image}" alt="${product.name}" class="search-result-image">
+      <div class="search-result-info">
+        <p class="search-result-name">${product.name}</p>
+        <p class="search-result-category">${product.category} · ${product.subcategory}</p>
+      </div>
+      <span class="search-result-price">$${product.price}</span>
+    </div>
+  `).join('');
+}
+
+function selectSearchProduct(category, subcategory) {
+  activeCategory = category;
+  activeSubcategory = subcategory;
+  updateCategoryButtons();
+  updateSubFilters();
+  renderProducts();
+  closeSearch();
+  document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ==================== MOBILE MENU ====================
+function buildMobileMenu() {
+  let html = '';
+  categories.forEach((cat) => {
+    html += `
+      <div class="mobile-category">
+        <button class="mobile-category-header" data-category="${cat.name}">
+          <span>${cat.name}</span>
+          <i data-lucide="chevron-down" width="18" height="18"></i>
+        </button>
+        <div class="mobile-subcategories" data-category="${cat.name}">
+          <a href="#" data-category="${cat.name}" data-subcategory="All">All ${cat.name}</a>
+          ${cat.subcategories.map(sub => `<a href="#" data-category="${cat.name}" data-subcategory="${sub}">${sub}</a>`).join('')}
+        </div>
+      </div>
+    `;
+  });
+  mobileMenuContent.innerHTML = html;
+  lucide.createIcons();
+
+  // Add click handlers for category headers
+  document.querySelectorAll('.mobile-category-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const category = header.dataset.category;
+      const subcategories = document.querySelector(`.mobile-subcategories[data-category="${category}"]`);
+      if (subcategories) {
+        header.classList.toggle('active');
+        subcategories.classList.toggle('show');
+      }
+    });
+  });
+
+  // Add click handlers for subcategory links
+  document.querySelectorAll('.mobile-subcategories a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const category = link.dataset.category;
+      const subcategory = link.dataset.subcategory;
+      
+      // Set filters
+      activeCategory = category;
+      activeSubcategory = subcategory;
+      
+      // Update UI
+      updateCategoryButtons();
+      updateSubFilters();
+      renderProducts();
+      
+      // Close mobile menu
+      mobileMenu.classList.remove('open');
+      updateMenuIcon();
+      
+      // Scroll to shop
+      document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+}
+
+function updateMenuIcon() {
+  const icon = menuToggle.querySelector('i');
+  if (icon) {
+    if (mobileMenu.classList.contains('open')) {
+      icon.setAttribute('data-lucide', 'x');
+    } else {
+      icon.setAttribute('data-lucide', 'menu');
+    }
+    lucide.createIcons();
+  }
+}
+
+// ==================== PRODUCTS ====================
+function renderProducts() {
+  const filtered = products.filter(p => {
+    const categoryMatch = activeCategory === 'All' || p.category === activeCategory;
+    const subcategoryMatch = activeSubcategory === 'All' || p.subcategory === activeSubcategory;
+    return categoryMatch && subcategoryMatch;
+  });
+
+  if (filtered.length === 0) {
+    productsGrid.innerHTML = `
+      <div class="empty-state">
+        <p class="empty-state-text">No items found.</p>
+        <button class="clear-filters-btn" onclick="clearFilters()">Clear filters</button>
+      </div>
+    `;
+    return;
+  }
+
+  productsGrid.innerHTML = filtered.map((product, index) => `
+    <div class="product-card" style="animation-delay: ${index * 0.05}s">
+      <div class="product-image-wrapper">
+        <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+        <div class="product-overlay"></div>
+        <div class="product-actions">
+          <button class="shop-btn" onclick="shopProduct('${product.affiliateUrl}')">
+            Shop Now
+            <i data-lucide="external-link" width="14" height="14"></i>
+          </button>
+          <button class="add-to-cart-btn" onclick="handleAddToCart(${product.id}, this)">
+            Add to Bag
+            <i data-lucide="shopping-bag" width="14" height="14"></i>
+          </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <span class="product-category">${product.subcategory}</span>
+        <h3 class="product-name">${product.name}</h3>
+        <span class="product-price">$${product.price}</span>
+      </div>
+    </div>
+  `).join('');
+
+  lucide.createIcons();
+}
+
+function handleAddToCart(productId, button) {
+  addToCart(productId);
+  
+  // Visual feedback
+  const originalText = button.innerHTML;
+  button.classList.add('added');
+  button.innerHTML = `
+    Added!
+    <i data-lucide="check" width="14" height="14"></i>
+  `;
+  lucide.createIcons();
+  
+  setTimeout(() => {
+    button.classList.remove('added');
+    button.innerHTML = originalText;
+    lucide.createIcons();
+  }, 1500);
+}
+
+function shopProduct(url) {
+  if (url && url !== '#') {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+}
+
+window.clearFilters = function() {
+  activeCategory = 'All';
+  activeSubcategory = 'All';
+  updateCategoryButtons();
+  updateSubFilters();
+  renderProducts();
+};
+
+// ==================== FILTERS ====================
+function updateCategoryButtons() {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.category === activeCategory);
+  });
+}
+
+function updateSubFilters() {
+  if (activeCategory === 'All') {
+    subFilters.innerHTML = '';
+    return;
+  }
+
+  const category = categories.find(c => c.name === activeCategory);
+  if (!category) return;
+
+  let html = `
+    <button class="sub-filter-btn ${activeSubcategory === 'All' ? 'active' : ''}" data-subcategory="All">
+      All ${activeCategory}
+    </button>
+  `;
+  
+  category.subcategories.forEach(sub => {
+    html += `
+      <button class="sub-filter-btn ${activeSubcategory === sub ? 'active' : ''}" data-subcategory="${sub}">
+        ${sub}
+      </button>
+    `;
+  });
+
+  subFilters.innerHTML = html;
+
+  // Add click handlers
+  document.querySelectorAll('.sub-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeSubcategory = btn.dataset.subcategory;
+      updateSubFilters();
+      renderProducts();
+    });
+  });
+}
+
+// ==================== EVENT LISTENERS ====================
+function setupEventListeners() {
+  // Category filter buttons
+  categoryFilters.addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    
+    activeCategory = btn.dataset.category;
+    activeSubcategory = 'All';
+    
+    updateCategoryButtons();
+    updateSubFilters();
+    renderProducts();
+  });
+
+  // Mobile menu toggle
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    updateMenuIcon();
+  });
+
+  // Explore button
+  if (exploreBtn) {
+    exploreBtn.addEventListener('click', () => {
+      document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  // Desktop nav links
+  document.querySelectorAll('.desktop-nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const category = link.dataset.category;
+      if (category) {
+        activeCategory = category;
+        activeSubcategory = 'All';
+        updateCategoryButtons();
+        updateSubFilters();
+        renderProducts();
+        document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Logo click - reload page
+  const logo = document.querySelector('.logo');
+  if (logo) {
+    logo.addEventListener('click', (e) => {
+      e.preventDefault();
+      location.reload();
+    });
+  }
+
+  // Footer filter links
+  document.querySelectorAll('.footer-filter-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const category = link.dataset.category;
+      if (category) {
+        activeCategory = category;
+        activeSubcategory = 'All';
+        updateCategoryButtons();
+        updateSubFilters();
+        renderProducts();
+        document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', init);

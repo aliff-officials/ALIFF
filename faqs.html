@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs · AURA Fashion</title>
+  <link rel="icon" type="image/png" href="fev.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    .page-header {
+      background: var(--ink);
+      color: var(--white);
+      padding: 6rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .page-header p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .faqs-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gray-mid);
+      margin-bottom: 2rem;
+      transition: var(--transition);
+    }
+    .back-link:hover {
+      color: var(--olive);
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(26,26,26,0.1);
+    }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--ink);
+      transition: var(--transition);
+    }
+    .faq-question:hover {
+      color: var(--olive);
+    }
+    .faq-question svg {
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .faq-question.active svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-answer-content {
+      padding-bottom: 1.5rem;
+      color: var(--gray-mid);
+      line-height: 1.7;
+    }
+    .faq-question.active + .faq-answer {
+      max-height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle menu">
+        <i data-lucide="menu" width="24" height="24"></i>
+      </button>
+      
+      <a href="index.html" class="logo">ALIFF</a>
+      
+      <div class="desktop-nav">
+        <a href="index.html#clothing" data-category="Clothing">Clothing</a>
+        <a href="index.html#shoes" data-category="Shoes">Shoes</a>
+        <a href="index.html#jewelry" data-category="Jewelry">Jewelry</a>
+        <a href="index.html#handbags" data-category="Handbags">Handbags</a>
+      </div>
+      
+      <div class="icon-group">
+        <button class="icon-btn search-btn" aria-label="Search">
+          <i data-lucide="search" width="20" height="20"></i>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping bag">
+          <i data-lucide="shopping-bag" width="20" height="20"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-content" id="mobileMenuContent"></div>
+    </div>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <div class="page-header">
+    <h1>Frequently Asked Questions</h1>
+    <p>Find answers to the most common questions about our products and services.</p>
+  </div>
+
+  <!-- ==================== FAQS SECTION ==================== -->
+  <section class="faqs-section">
+    <a href="index.html" class="back-link">
+      <i data-lucide="arrow-left" width="18" height="18"></i>
+      Back to Home
+    </a>
+    
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>What is your return policy?</span>
+          <i data-lucide="chevron-down" width="20" height="20"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            We offer a 30-day return policy for all unused items in their original condition. Please contact our customer service team to initiate a return. Refunds are processed within 5-7 business days after we receive the returned item.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How do I track my order?</span>
+          <i data-lucide="chevron-down" width="20" height="20"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Once your order ships, you'll receive an email with tracking information. You can also track your order by logging into your account on our website or by contacting our customer service team.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you offer international shipping?</span>
+          <i data-lucide="chevron-down" width="20" height="20"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Yes! We ship to over 100 countries worldwide. International shipping rates and delivery times vary by location. All international orders may be subject to customs duties and taxes, which are the responsibility of the customer.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How do I find my correct size?</span>
+          <i data-lucide="chevron-down" width="20" height="20"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Each product page includes a detailed size guide. You can also contact our customer service for personalized sizing assistance. We recommend measuring yourself and comparing with our size chart before placing your order.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Are your products ethically sourced?</span>
+          <i data-lucide="chevron-down" width="20" height="20"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Yes, we are committed to ethical sourcing and sustainable practices. We work with certified suppliers who meet our strict labor and environmental standards. All our products are made with care for both people and the planet.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How do I care for my garments?</span>
+          <i data-lucide="chevron-down" width="20" height="20"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Care instructions are provided on the label of each garment. In general, we recommend hand washing or dry cleaning for delicate items. For everyday pieces, machine wash cold with similar colors. Always lay flat to dry to maintain the shape and quality.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can I change or cancel my order after placing it?</span>
+          <i data-lucide="chevron-down" width="20" height="20"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            We process orders quickly to ensure fast delivery. You can request a change or cancellation within 1 hour of placing your order by contacting our customer service team. We'll do our best to accommodate your request.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you offer gift wrapping?</span>
+          <i data-lucide="chevron-down" width="20" height="20"></i>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Yes! We offer premium gift wrapping for all occasions. You can add this option during checkout. Each gift comes beautifully packaged with a personalized message card of your choice.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-col">
+          <h2>AURA</h2>
+          <p>Elevating everyday style through a curated lens of quality and sophistication.</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/aliff.officials/" aria-label="Instagram"><i data-lucide="instagram" width="20" height="20"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61588541069668" aria-label="Facebook"><i data-lucide="facebook" width="20" height="20"></i></a>
+            <a href="https://x.com/aliff_officials" aria-label="Twitter"><i data-lucide="twitter" width="20" height="20"></i></a>
+            <a href="https://www.tiktok.com/@aliff_officials?lang=en" aria-label="TikTok"><i data-lucide="video" width="20" height="20"></i></a>
+          </div>
+        </div>
+        
+        <!-- Shop Column -->
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="index.html#shop">New Arrivals</a></li>
+            <li><a href="index.html#clothing">Clothing</a></li>
+            <li><a href="index.html#shoes">Shoes</a></li>
+            <li><a href="index.html#jewelry">Jewelry</a></li>
+            <li><a href="index.html#handbags">Handbags</a></li>
+          </ul>
+        </div>
+        
+        <!-- Support Column -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter Column -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Join our community for exclusive access to new collections and styling tips.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email">
+            <button>Join</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>© 2026 AURA Fashion. All rights reserved.</span>
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="cookie-settings.html">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // FAQ accordion functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        question.classList.toggle('active');
+      });
+    });
+    
+    // Initialize icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>

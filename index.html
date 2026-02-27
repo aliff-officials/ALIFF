@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALIFF · Curated Fashion</title>
+  <link rel="icon" type="image/png" href="fev.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle menu">
+        <i data-lucide="menu" width="24" height="24"></i>
+      </button>
+      
+      <a href="#" class="logo">ALIFF</a>
+      
+      <div class="desktop-nav">
+        <a href="#clothing" data-category="Clothing">Clothing</a>
+        <a href="#shoes" data-category="Shoes">Shoes</a>
+        <a href="#jewelry" data-category="Jewelry">Jewelry</a>
+        <a href="#handbags" data-category="Handbags">Handbags</a>
+      </div>
+      
+      <div class="icon-group">
+        <button class="icon-btn search-btn" aria-label="Search">
+          <i data-lucide="search" width="20" height="20"></i>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping bag">
+          <i data-lucide="shopping-bag" width="20" height="20"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-content" id="mobileMenuContent"></div>
+    </div>
+  </nav>
+
+  <!-- ==================== SEARCH OVERLAY ==================== -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-header">
+      <button class="search-close-btn" id="searchClose" aria-label="Close search">
+        <i data-lucide="x" width="28" height="28"></i>
+      </button>
+    </div>
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <i data-lucide="search" width="20" height="20" class="search-icon"></i>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for products...">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- ==================== CART OVERLAY ==================== -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h2>Your Bag</h2>
+        <button class="cart-close-btn" id="cartClose" aria-label="Close cart">
+          <i data-lucide="x" width="24" height="24"></i>
+        </button>
+      </div>
+      
+      <div class="cart-items" id="cartItems">
+        <!-- Cart items will be rendered here -->
+      </div>
+      
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cartTotal">$0</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">
+          Proceed to Checkout
+          <i data-lucide="arrow-right" width="18" height="18"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero">
+    <div class="hero-image">
+            <img src="pic (3).jpg" alt="Spring Summer Collection" loading="eager">
+      <!-- <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80" alt="Spring Summer Collection" loading="eager"> -->
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Spring Summer 2026</p>
+      <h1 class="hero-title">
+        The Art of <br>
+        <span class="italic">Effortless</span> Style
+      </h1>
+      <button class="hero-btn" id="exploreBtn">
+        Explore Collection
+        <i data-lucide="arrow-right" width="18" height="18"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ==================== SHOP SECTION ==================== -->
+  <section class="shop-section" id="shop">
+    <div class="section-header">
+      <h2 class="section-title">Curated Essentials</h2>
+      <p class="section-subtitle">Browse our hand-picked selection of the season's most coveted styles.</p>
+    </div>
+    
+    <!-- Category Filters -->
+    <div class="filters" id="categoryFilters">
+      <button class="filter-btn active" data-category="All" aria-label="All Collections">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=100&h=100&fit=crop&crop=center" alt="All Collections">
+      </button>
+      <button class="filter-btn" data-category="Clothing" aria-label="Clothing">
+        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=100&h=100&fit=crop&crop=center" alt="Clothing">
+      </button>
+      <button class="filter-btn" data-category="Shoes" aria-label="Shoes">
+        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=100&h=100&fit=crop&crop=center" alt="Shoes">
+      </button>
+      <button class="filter-btn" data-category="Jewelry" aria-label="Jewelry">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=100&h=100&fit=crop&crop=center" alt="Jewelry">
+      </button>
+      <button class="filter-btn" data-category="Handbags" aria-label="Handbags">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=100&h=100&fit=crop&crop=center" alt="Handbags">
+      </button>
+    </div>
+    
+    <!-- Subcategory Filters -->
+    <div class="sub-filters" id="subFilters"></div>
+    
+    <!-- Products Grid -->
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-col">
+          <h2>AURA</h2>
+          <p>Elevating everyday style through a curated lens of quality and sophistication.</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/aliff.officials/" aria-label="Instagram"><i data-lucide="instagram" width="20" height="20"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61588541069668" aria-label="Facebook"><i data-lucide="facebook" width="20" height="20"></i></a>
+            <a href="https://x.com/aliff_officials" aria-label="Twitter"><i data-lucide="twitter" width="20" height="20"></i></a>
+            <a href="https://www.tiktok.com/@aliff_officials?lang=en" aria-label="TikTok"><i data-lucide="video" width="20" height="20"></i></a>
+          </div>
+        </div>
+        
+        <!-- Shop Column -->
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#shop" class="footer-filter-link" data-category="All">New Arrivals</a></li>
+            <li><a href="#shop" class="footer-filter-link" data-category="Clothing">Clothing</a></li>
+            <li><a href="#shop" class="footer-filter-link" data-category="Shoes">Shoes</a></li>
+            <li><a href="#shop" class="footer-filter-link" data-category="Jewelry">Jewelry</a></li>
+            <li><a href="#shop" class="footer-filter-link" data-category="Handbags">Handbags</a></li>
+          </ul>
+        </div>
+        
+        <!-- Support Column -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter Column -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Join our community for exclusive access to new collections and styling tips.</p>
+          <div class="newsletter-form" id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="Your email" required>
+            <button type="submit" id="newsletterBtn">Join</button>
+          </div>
+          <div class="newsletter-message" id="newsletterMessage"></div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>© 2026 AURA Fashion. All rights reserved.</span>
+        <div>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="cookie-settings.html">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
