@@ -740,6 +740,27 @@ img {
   border-radius: 50%;
 }
 
+/* Wrapper for image + text */
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Text under circle */
+.filter-item span {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+  transition: var(--transition);
+}
+
+/* Optional: highlight text when active */
+.filter-btn.active + span {
+  color: var(--olive);
+}
 /* Subcategory Filters */
 .sub-filters {
   display: flex;
@@ -1177,3 +1198,4 @@ img {
   white-space: nowrap;
   border: 0;
 }
+
