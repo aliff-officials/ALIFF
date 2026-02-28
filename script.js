@@ -47,18 +47,29 @@ image: "https://m.media-amazon.com/images/I/81kgYk-DgyL._AC_SX569_.jpg", affilia
 { id: "4.5", name: "Columbia Benton Springs Full Zip Jacket", category: "Clothing", subcategory: "Coat & Jackets", price: 45.99,image: "https://m.media-amazon.com/images/I/71WpOyoJCyS._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/4kZawpj" },
 
 
-  { id: 5, name: 'Leather Ankle Boots', category: 'Shoes', subcategory: 'Boots', price: 245, image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 6, name: 'Strappy Sandals', category: 'Shoes', subcategory: 'Sandals', price: 165, image: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 7, name: 'White Leather Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 195, image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 8, name: 'Pointed Toe Heels', category: 'Shoes', subcategory: 'Heels', price: 275, image: 'https://images.unsplash.com/photo-1515347619252-60a6bf4fffce?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 9, name: '14k Gold Hoop Earrings', category: 'Jewelry', subcategory: 'Earrings', price: 320, image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 10, name: 'Pearl Pendant Necklace', category: 'Jewelry', subcategory: 'Necklaces', price: 245, image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 11, name: 'Diamond Stacking Rings', category: 'Jewelry', subcategory: 'Rings', price: 450, image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 12, name: 'Gold Tennis Bracelet', category: 'Jewelry', subcategory: 'Bracelets', price: 380, image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 13, name: 'Structured Leather Tote', category: 'Handbags', subcategory: 'Totes', price: 450, image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 14, name: 'Crossbody Bag', category: 'Handbags', subcategory: 'Crossbody', price: 225, image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 15, name: 'Mini Leather Bag', category: 'Handbags', subcategory: 'Mini Bags', price: 185, image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 16, name: 'Evening Clutch', category: 'Handbags', subcategory: 'Clutches', price: 165, image: 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600&h=800&fit=crop', affiliateUrl: '#' }
+  { id: "5.1", name: "Amazon Essentials Women's Thong Sandal", category: "Shoes", subcategory: "Sandals", price: 14.99,
+image: "https://m.media-amazon.com/images/I/61zim4qDNNL._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/3OFfJqi" },
+{ id: "5.2", name: "Sandals Women Dressy Flats", category: "Shoes", subcategory: "Sandals", price: 35.99,
+image: "https://m.media-amazon.com/images/I/81qAyvfeoCL._AC_SY695_.jpg", affiliateUrl: "https://amzn.to/4rOAO0i" },
+{ id: "5.3", name: "Flip Flops for Women with Arch Support", category: "Shoes", subcategory: "Sandals", price: 13.99,
+image: "https://m.media-amazon.com/images/I/710PdcSAm6L._AC_SX695_.jpg", affiliateUrl: "https://amzn.to/4bdZ5H4" },
+{ id: "5.4", name: "Womens Arch Support Flip Flops", category: "Shoes", subcategory: "Sandals", price: 15.99,
+image: "https://m.media-amazon.com/images/I/71FLg8v7ZyL._AC_SX695_.jpg", affiliateUrl: "https://amzn.to/4l6eInu" },
+{ id: "5.5", name: "Women's Ankle Strap Flat Sandals", category: "Shoes", subcategory: "Sandals", price: 29.99,
+image: "https://m.media-amazon.com/images/I/618fc8WCkmL._AC_SY695_.jpg", affiliateUrl: "https://amzn.to/4bdZfhE" },
+
+
+  // { id: 6, name: 'Leather Ankle Boots', category: 'Shoes', subcategory: 'Boots', price: 245, image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 7, name: 'White Leather Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 195, image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 8, name: 'Pointed Toe Heels', category: 'Shoes', subcategory: 'Heels', price: 275, image: 'https://images.unsplash.com/photo-1515347619252-60a6bf4fffce?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 9, name: '14k Gold Hoop Earrings', category: 'Jewelry', subcategory: 'Earrings', price: 320, image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 10, name: 'Pearl Pendant Necklace', category: 'Jewelry', subcategory: 'Necklaces', price: 245, image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 11, name: 'Diamond Stacking Rings', category: 'Jewelry', subcategory: 'Rings', price: 450, image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 12, name: 'Gold Tennis Bracelet', category: 'Jewelry', subcategory: 'Bracelets', price: 380, image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 13, name: 'Structured Leather Tote', category: 'Handbags', subcategory: 'Totes', price: 450, image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 14, name: 'Crossbody Bag', category: 'Handbags', subcategory: 'Crossbody', price: 225, image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 15, name: 'Mini Leather Bag', category: 'Handbags', subcategory: 'Mini Bags', price: 185, image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  // { id: 16, name: 'Evening Clutch', category: 'Handbags', subcategory: 'Clutches', price: 165, image: 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600&h=800&fit=crop', affiliateUrl: '#' }
 ];
 
 // ==================== STATE ====================
@@ -632,4 +643,5 @@ function setupEventListeners() {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', init);
+
 
