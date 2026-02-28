@@ -8,7 +8,7 @@ const categories = [
 
 const products = [
   //DRESSES
-{ id: 1.1, name: "ANRABESS Womens Summer Dress", category: "Clothing", subcategory: "Dresses", price: 25.99,
+{ id: "1.1", name: "ANRABESS Womens Summer Dress", category: "Clothing", subcategory: "Dresses", price: 25.99,
 image: "https://m.media-amazon.com/images/I/71Q9ohCPN6L._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4aFmQaL" },
 { id: "1.2", name: "ZEAGOO Summer Dresses for Women", category: "Clothing", subcategory: "Dresses", price: 16.99,
 image: "https://m.media-amazon.com/images/I/71Kp0LvnIiL._AC_SX569_.jpg", affiliateUrl: "https://amzn.to/4rGpO4X" },
@@ -47,8 +47,8 @@ image: "https://m.media-amazon.com/images/I/81kgYk-DgyL._AC_SX569_.jpg", affilia
 { id: "4.5", name: "Columbia Benton Springs Full Zip Jacket", category: "Clothing", subcategory: "Coat & Jackets", price: 45.99,image: "https://m.media-amazon.com/images/I/71WpOyoJCyS._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/4kZawpj" },
 
 
-  { id: "5.1", name: "Amazon Essentials Women's Thong Sandal", category: "Shoes", subcategory: "Sandals", price: 14.99,
-image: "https://m.media-amazon.com/images/I/61zim4qDNNL._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/3OFfJqi" },
+{ id: "5.1", name: "Amazon Essentials Women's Thong Sandal", category: "Shoes", subcategory: "Sandals", price: 14.99,
+image: "https://m.media-amazon.com/images/I/813kk2fgaSL._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/3OFfJqi" },
 { id: "5.2", name: "Sandals Women Dressy Flats", category: "Shoes", subcategory: "Sandals", price: 35.99,
 image: "https://m.media-amazon.com/images/I/81qAyvfeoCL._AC_SY695_.jpg", affiliateUrl: "https://amzn.to/4rOAO0i" },
 { id: "5.3", name: "Flip Flops for Women with Arch Support", category: "Shoes", subcategory: "Sandals", price: 13.99,
@@ -56,7 +56,7 @@ image: "https://m.media-amazon.com/images/I/710PdcSAm6L._AC_SX695_.jpg", affilia
 { id: "5.4", name: "Womens Arch Support Flip Flops", category: "Shoes", subcategory: "Sandals", price: 15.99,
 image: "https://m.media-amazon.com/images/I/71FLg8v7ZyL._AC_SX695_.jpg", affiliateUrl: "https://amzn.to/4l6eInu" },
 { id: "5.5", name: "Women's Ankle Strap Flat Sandals", category: "Shoes", subcategory: "Sandals", price: 29.99,
-image: "https://m.media-amazon.com/images/I/618fc8WCkmL._AC_SY695_.jpg", affiliateUrl: "https://amzn.to/4bdZfhE" },
+image: "https://m.media-amazon.com/images/I/61nSidnu-BL._AC_SY695_.jpg", affiliateUrl: "https://amzn.to/4bdZfhE" },
 
 
   // { id: 6, name: 'Leather Ankle Boots', category: 'Shoes', subcategory: 'Boots', price: 245, image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=800&fit=crop', affiliateUrl: '#' },
@@ -643,5 +643,6 @@ function setupEventListeners() {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', init);
+
 
 
