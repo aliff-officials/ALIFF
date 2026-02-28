@@ -8,7 +8,7 @@ const categories = [
 
 const products = [
   //DRESSES
-{ id: "1.1", name: "ANRABESS Womens Summer Dress", category: "Clothing", subcategory: "Dresses", price: 25.99,
+{ id: 1.1, name: "ANRABESS Womens Summer Dress", category: "Clothing", subcategory: "Dresses", price: 25.99,
 image: "https://m.media-amazon.com/images/I/71Q9ohCPN6L._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4aFmQaL" },
 { id: "1.2", name: "ZEAGOO Summer Dresses for Women", category: "Clothing", subcategory: "Dresses", price: 16.99,
 image: "https://m.media-amazon.com/images/I/71Kp0LvnIiL._AC_SX569_.jpg", affiliateUrl: "https://amzn.to/4rGpO4X" },
@@ -632,3 +632,4 @@ function setupEventListeners() {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', init);
+
