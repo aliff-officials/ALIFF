@@ -1,16 +1,52 @@
 // ==================== DATA ====================
 const categories = [
-  { name: 'Clothing', subcategories: ['Dresses', 'Knitwear', 'Blouses', 'Outerwear'] },
+  { name: 'Clothing', subcategories: ['Dresses', 'Sweaters', 'Pants', 'Coat & Jackets'] },
   { name: 'Shoes', subcategories: ['Sandals', 'Boots', 'Sneakers', 'Heels'] },
   { name: 'Jewelry', subcategories: ['Rings', 'Necklaces', 'Earrings', 'Bracelets'] },
   { name: 'Handbags', subcategories: ['Crossbody', 'Totes', 'Mini Bags', 'Clutches'] }
 ];
 
 const products = [
-  { id: 1, name: 'Silk Wrap Midi Dress', category: 'Clothing', subcategory: 'Dresses', price: 185, image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&fit=crop', affiliateUrl: 'https://google.com/' },
-  { id: 2, name: 'Cashmere Oversized Sweater', category: 'Clothing', subcategory: 'Knitwear', price: 210, image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 3, name: 'Linen Blend Blouse', category: 'Clothing', subcategory: 'Blouses', price: 125, image: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  { id: 4, name: 'Wool Blend Coat', category: 'Clothing', subcategory: 'Outerwear', price: 385, image: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&h=800&fit=crop', affiliateUrl: '#' },
+  //DRESSES
+{ id: "1.1", name: "ANRABESS Womens Summer Dress", category: "Clothing", subcategory: "Dresses", price: 25.99,
+image: "https://m.media-amazon.com/images/I/71Q9ohCPN6L._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4aFmQaL" },
+{ id: "1.2", name: "ZEAGOO Summer Dresses for Women", category: "Clothing", subcategory: "Dresses", price: 16.99,
+image: "https://m.media-amazon.com/images/I/71Kp0LvnIiL._AC_SX569_.jpg", affiliateUrl: "https://amzn.to/4rGpO4X" },
+{ id: "1.3", name: "BTFBM Women’s Summer Dresses", category: "Clothing", subcategory: "Dresses", price: 19.99,
+image: "https://m.media-amazon.com/images/I/71XcukmMx0L._AC_SX569_.jpg", affiliateUrl: "https://amzn.to/4l2mGhe" },
+{ id: "1.4", name: "WIHOLL Summer Dresses for Women", category: "Clothing", subcategory: "Dresses", price: 14.99,
+image: "https://m.media-amazon.com/images/I/815A5zIW1DL._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4r1B0bc" },
+{ id: "1.5", name: "GRECERELLE Women Casual Round Neck Loose Split", category: "Clothing", subcategory: "Dresses", price: 28.99,image: "https://m.media-amazon.com/images/I/61ceyasLBOL._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4b0yxId" },
+
+//SWEATERS
+{ id: "2.1", name: "Trendy Queen Cropped Cardigan Sweaters for Women", category: "Clothing", subcategory: "Sweaters", price: 24.99,image: "https://m.media-amazon.com/images/I/71EMLE2FjpL._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4simzk1" },
+{ id: "2.2", name: "Trendy Queen Women's Oversized Cable Sweaters", category: "Clothing", subcategory: "Sweaters", price: 24.99,image: "https://m.media-amazon.com/images/I/71l9N09tGUL._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4cNRJeA" },
+{ id: "2.3", name: "Women's Long Sleeve Knit Shrugs Sweater", category: "Clothing", subcategory: "Sweaters", price: 14.99,image: "https://m.media-amazon.com/images/I/712kTHgqJvL._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/4r61Dvr" },
+{ id: "2.4", name: "Women's Lightweight Wool Short Sleeve Sweater", category: "Clothing", subcategory: "Sweaters", price: 22.99,image: "https://m.media-amazon.com/images/I/81OlQsvzDuL._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4cRtMD1" },
+{ id: "2.5", name: "Women's Oversized Batwing Sweaters", category: "Clothing", subcategory: "Sweaters", price: 19.99,image: "https://m.media-amazon.com/images/I/61CvT1de7IL._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4rHGV6x" },
+
+//PANTS
+{ id: "3.1", name: "Sampeel Wide Leg Palazzo Pants", category: "Clothing", subcategory: "Pants", price: 17.99,
+image: "https://m.media-amazon.com/images/I/71UObPvtX+L._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4l0pZ8F" },
+{ id: "3.2", name: "Trendy Queen Boho Wide Leg Pants", category: "Clothing", subcategory: "Pants", price: 24.99,
+image: "https://m.media-amazon.com/images/I/61h2C8UDpML._AC_SY879_.jpg", affiliateUrl: "https://amzn.to/4cUeD3T" },
+{ id: "3.3", name: "Womens Work Casual Wide Leg Pants", category: "Clothing", subcategory: "Pants", price: 14.99,
+image: "https://m.media-amazon.com/images/I/716xJMU1g6L._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4l2g42u" },
+{ id: "3.4", name: "Women's Straight Wide Leg Pants", category: "Clothing", subcategory: "Pants", price: 17.99,
+image: "https://m.media-amazon.com/images/I/51yiSRD3+FL._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4ce1Sky" },
+{ id: "3.5", name: "Women's Leopard Print Wide Pants", category: "Clothing", subcategory: "Pants", price: 30.99,
+image: "https://m.media-amazon.com/images/I/71wRgfCNQML._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4b1Cqwx" },
+
+//COAT & JACKETS
+{ id: "4.1", name: "Hagon PRO 5-Pack Rain Ponchos", category: "Clothing", subcategory: "Coat & Jackets", price: 9.99,
+image: "https://m.media-amazon.com/images/I/712kxoa9k8L._AC_SY879_.jpg", affiliateUrl: "https://amzn.to/4cZ8eo2" },
+{ id: "4.2", name: "Amazon Essentials Packable Puffer Jacket", category: "Clothing", subcategory: "Coat & Jackets", price: 23.99,image: "https://m.media-amazon.com/images/I/71COVlkiXGL._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/4aYrhwm" },
+{ id: "4.3", name: "Vetinee Oversized Frayed Hem Shacket", category: "Clothing", subcategory: "Coat & Jackets", price: 30.99,
+image: "https://m.media-amazon.com/images/I/81kgYk-DgyL._AC_SX569_.jpg", affiliateUrl: "https://amzn.to/3OCy3As" },
+{ id: "4.4", name: "Luvamia Fitted Button Down Denim Jacket", category: "Clothing", subcategory: "Coat & Jackets", price: 33.99,image: "https://m.media-amazon.com/images/I/61NvBDYqlJL._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4l3RQVw" },
+{ id: "4.5", name: "Columbia Benton Springs Full Zip Jacket", category: "Clothing", subcategory: "Coat & Jackets", price: 45.99,image: "https://m.media-amazon.com/images/I/71WpOyoJCyS._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/4kZawpj" },
+
+
   { id: 5, name: 'Leather Ankle Boots', category: 'Shoes', subcategory: 'Boots', price: 245, image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=800&fit=crop', affiliateUrl: '#' },
   { id: 6, name: 'Strappy Sandals', category: 'Shoes', subcategory: 'Sandals', price: 165, image: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&h=800&fit=crop', affiliateUrl: '#' },
   { id: 7, name: 'White Leather Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 195, image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=800&fit=crop', affiliateUrl: '#' },
@@ -72,34 +108,34 @@ function setupNewsletter() {
 
   newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const email = newsletterEmail.value.trim();
-    
+
     // Validate email
     if (!email) {
       showNewsletterMessage('Please enter your email address.', 'error');
       return;
     }
-    
+
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       showNewsletterMessage('Please enter a valid email address.', 'error');
       return;
     }
-    
+
     // Show loading state
     const originalBtnText = newsletterBtn.textContent;
     newsletterBtn.textContent = 'Joining...';
     newsletterBtn.disabled = true;
-    
+
     // Simulate API call (in production, replace with actual API)
     setTimeout(() => {
       // Success
       showNewsletterMessage('Welcome to ALIFF! You\'re now subscribed to our newsletter.', 'success');
       newsletterEmail.value = '';
       newsletterBtn.textContent = 'Joined!';
-      
+
       // Reset button after 2 seconds
       setTimeout(() => {
         newsletterBtn.textContent = originalBtnText;
@@ -111,11 +147,11 @@ function setupNewsletter() {
 
 function showNewsletterMessage(message, type) {
   if (!newsletterMessage) return;
-  
+
   newsletterMessage.textContent = message;
   newsletterMessage.className = `newsletter-message ${type}`;
   newsletterMessage.style.display = 'block';
-  
+
   // Auto-hide after 5 seconds
   setTimeout(() => {
     newsletterMessage.style.display = 'none';
@@ -242,7 +278,7 @@ function updateCartUI() {
 // ==================== SEARCH FUNCTIONALITY ====================
 function setupSearch() {
   if (!searchBtn || !searchOverlay) return;
-  
+
   // Open search overlay
   searchBtn.addEventListener('click', () => {
     searchOverlay.classList.add('open');
@@ -253,7 +289,7 @@ function setupSearch() {
   if (searchClose) {
     searchClose.addEventListener('click', closeSearch);
   }
-  
+
   if (searchOverlay) {
     searchOverlay.addEventListener('click', (e) => {
       if (e.target === searchOverlay) {
@@ -297,7 +333,7 @@ function performSearch(query) {
     return;
   }
 
-  const results = products.filter(p => 
+  const results = products.filter(p =>
     p.name.toLowerCase().includes(query) ||
     p.category.toLowerCase().includes(query) ||
     p.subcategory.toLowerCase().includes(query)
@@ -372,20 +408,20 @@ function buildMobileMenu() {
       e.preventDefault();
       const category = link.dataset.category;
       const subcategory = link.dataset.subcategory;
-      
+
       // Set filters
       activeCategory = category;
       activeSubcategory = subcategory;
-      
+
       // Update UI
       updateCategoryButtons();
       updateSubFilters();
       renderProducts();
-      
+
       // Close mobile menu
       mobileMenu.classList.remove('open');
       updateMenuIcon();
-      
+
       // Scroll to shop
       document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
     });
@@ -451,7 +487,7 @@ function renderProducts() {
 
 function handleAddToCart(productId, button) {
   addToCart(productId);
-  
+
   // Visual feedback
   const originalText = button.innerHTML;
   button.classList.add('added');
@@ -460,7 +496,7 @@ function handleAddToCart(productId, button) {
     <i data-lucide="check" width="14" height="14"></i>
   `;
   lucide.createIcons();
-  
+
   setTimeout(() => {
     button.classList.remove('added');
     button.innerHTML = originalText;
@@ -474,7 +510,7 @@ function shopProduct(url) {
   }
 }
 
-window.clearFilters = function() {
+window.clearFilters = function () {
   activeCategory = 'All';
   activeSubcategory = 'All';
   updateCategoryButtons();
@@ -503,7 +539,7 @@ function updateSubFilters() {
       All ${activeCategory}
     </button>
   `;
-  
+
   category.subcategories.forEach(sub => {
     html += `
       <button class="sub-filter-btn ${activeSubcategory === sub ? 'active' : ''}" data-subcategory="${sub}">
@@ -530,10 +566,10 @@ function setupEventListeners() {
   categoryFilters.addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-btn');
     if (!btn) return;
-    
+
     activeCategory = btn.dataset.category;
     activeSubcategory = 'All';
-    
+
     updateCategoryButtons();
     updateSubFilters();
     renderProducts();
