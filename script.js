@@ -1,9 +1,9 @@
 // ==================== DATA ====================
 const categories = [
   { name: 'Clothing', subcategories: ['Dresses', 'Sweaters', 'Pants', 'Coat & Jackets'] },
-  { name: 'Shoes', subcategories: ['Sandals', 'Boots', 'Sneakers', 'Heels'] },
+  { name: 'Shoes', subcategories: ['Sandals', 'Boots', 'Sneakers', 'Slippers'] },
   { name: 'Jewelry', subcategories: ['Rings', 'Necklaces', 'Earrings', 'Bracelets'] },
-  { name: 'Handbags', subcategories: ['Crossbody', 'Totes', 'Mini Bags', 'Clutches'] }
+  { name: 'Accessories', subcategories: ['Cross-Body Bags'] }
 ];
 
 const products = [
@@ -46,7 +46,7 @@ image: "https://m.media-amazon.com/images/I/81kgYk-DgyL._AC_SX569_.jpg", affilia
 { id: "4.4", name: "Luvamia Fitted Button Down Denim Jacket", category: "Clothing", subcategory: "Coat & Jackets", price: 33.99,image: "https://m.media-amazon.com/images/I/61NvBDYqlJL._AC_SY741_.jpg", affiliateUrl: "https://amzn.to/4l3RQVw" },
 { id: "4.5", name: "Columbia Benton Springs Full Zip Jacket", category: "Clothing", subcategory: "Coat & Jackets", price: 45.99,image: "https://m.media-amazon.com/images/I/71WpOyoJCyS._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/4kZawpj" },
 
-
+//SANDALS
 { id: "5.1", name: "Amazon Essentials Women's Thong Sandal", category: "Shoes", subcategory: "Sandals", price: 14.99,
 image: "https://m.media-amazon.com/images/I/813kk2fgaSL._AC_SX679_.jpg", affiliateUrl: "https://amzn.to/3OFfJqi" },
 { id: "5.2", name: "Sandals Women Dressy Flats", category: "Shoes", subcategory: "Sandals", price: 35.99,
@@ -58,18 +58,64 @@ image: "https://m.media-amazon.com/images/I/71FLg8v7ZyL._AC_SX695_.jpg", affilia
 { id: "5.5", name: "Women's Ankle Strap Flat Sandals", category: "Shoes", subcategory: "Sandals", price: 29.99,
 image: "https://m.media-amazon.com/images/I/61nSidnu-BL._AC_SY695_.jpg", affiliateUrl: "https://amzn.to/4bdZfhE" },
 
+//BOOTS
+{ id: 6.1, name: 'Chooka Waterproof Plush Chelsea Booties', category: 'Shoes', subcategory: 'Boots', price: 24.99, image: 'https://m.media-amazon.com/images/I/71D0U-MkmML._AC_SX695_.jpg', affiliateUrl: 'https://amzn.to/4r2BcqE' },
+{ id: 6.2, name: 'SHIBEVER Waterproof Fur Lined Snow Boots', category: 'Shoes', subcategory: 'Boots', price: 38.99, image: 'https://m.media-amazon.com/images/I/71VIS4ScINL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/3OUCBSJ' },
+{ id: 6.3, name: 'Elyffany Glitter Block Heel Ankle Boots', category: 'Shoes', subcategory: 'Boots', price: 46.99, image: 'https://m.media-amazon.com/images/I/61wPdCnEUNL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/47jJGCD' },
+{ id: 6.4, name: 'Litfun Suede Platform Fur Boots', category: 'Shoes', subcategory: 'Boots', price: 35.99, image: 'https://m.media-amazon.com/images/I/710jkrYRNiL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/406EVZh' },
+{ id: 6.5, name: 'SHIBEVER Insulated Waterproof Winter Booties', category: 'Shoes', subcategory: 'Boots', price: 44.99, image: 'https://m.media-amazon.com/images/I/718AF2FctBL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4rIa5lM' },
 
-  // { id: 6, name: 'Leather Ankle Boots', category: 'Shoes', subcategory: 'Boots', price: 245, image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 7, name: 'White Leather Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 195, image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 8, name: 'Pointed Toe Heels', category: 'Shoes', subcategory: 'Heels', price: 275, image: 'https://images.unsplash.com/photo-1515347619252-60a6bf4fffce?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 9, name: '14k Gold Hoop Earrings', category: 'Jewelry', subcategory: 'Earrings', price: 320, image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 10, name: 'Pearl Pendant Necklace', category: 'Jewelry', subcategory: 'Necklaces', price: 245, image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 11, name: 'Diamond Stacking Rings', category: 'Jewelry', subcategory: 'Rings', price: 450, image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 12, name: 'Gold Tennis Bracelet', category: 'Jewelry', subcategory: 'Bracelets', price: 380, image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 13, name: 'Structured Leather Tote', category: 'Handbags', subcategory: 'Totes', price: 450, image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 14, name: 'Crossbody Bag', category: 'Handbags', subcategory: 'Crossbody', price: 225, image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 15, name: 'Mini Leather Bag', category: 'Handbags', subcategory: 'Mini Bags', price: 185, image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&h=800&fit=crop', affiliateUrl: '#' },
-  // { id: 16, name: 'Evening Clutch', category: 'Handbags', subcategory: 'Clutches', price: 165, image: 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600&h=800&fit=crop', affiliateUrl: '#' }
+//SNEAKERS
+{ id: 7.1, name: 'SERNIAL White PU Leather Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 23.99, image: 'https://m.media-amazon.com/images/I/61oa+rlwTiL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4l5euge' },
+{ id: 7.2, name: 'LUCKY STEP Retro Gum Sole Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 34.19, image: 'https://m.media-amazon.com/images/I/81PfmZz5nkL._AC_SX695_.jpg', affiliateUrl: 'https://amzn.to/4tZHSZc' },
+{ id: 7.3, name: 'LUCKY STEP Retro Casual Leather Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 34.19, image: 'https://m.media-amazon.com/images/I/81Er+xfECeL._AC_SX695_.jpg', affiliateUrl: 'https://amzn.to/4kZ7RMk' },
+{ id: 7.4, name: 'Women’s High Top Canvas Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 20.19, image: 'https://m.media-amazon.com/images/I/81Kpw50WTbL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4ckiFm7' },
+{ id: 7.5, name: 'Adokoo Low Top Canvas Sneakers', category: 'Shoes', subcategory: 'Sneakers', price: 19.99, image: 'https://m.media-amazon.com/images/I/71HPCUwAHuL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4aSYdWV' },
+
+//SLIPPERS
+{ id: 8.1, name: 'EverFoams Fuzzy Memory Foam Slippers', category: 'Shoes', subcategory: 'Slippers', price: 13.99, image: 'https://m.media-amazon.com/images/I/71yhTG8TNrL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4be84YK' },
+{ id: 8.2, name: 'EverFoams Curly Fleece Memory Slippers', category: 'Shoes', subcategory: 'Slippers', price: 16.99, image: 'https://m.media-amazon.com/images/I/81sC6gHfzcL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/46uRpO6' },
+{ id: 8.3, name: 'Evshine Cross Band Fuzzy Slippers', category: 'Shoes', subcategory: 'Slippers', price: 9.99, image: 'https://m.media-amazon.com/images/I/81YM-vsIEnL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4cfrWMa' },
+{ id: 8.4, name: 'EverFoams Fuzzy Open Toe Slippers', category: 'Shoes', subcategory: 'Slippers', price: 21.99, image: 'https://m.media-amazon.com/images/I/81ccFoVLjwL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4aFBizC' },
+{ id: 8.5, name: 'Evshine Knit Memory Foam Slippers', category: 'Shoes', subcategory: 'Slippers', price: 9.99, image: 'https://m.media-amazon.com/images/I/81KND3oktxL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4aWdw0Z' },
+
+//RINGS
+{ id: 9.1, name: 'PAVOI 14K Gold CZ Stackable Ring', category: 'Jewelry', subcategory: 'Rings', price: 18.95, image: 'https://m.media-amazon.com/images/I/61npoHPNLHL._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/4rJTVIQ' },
+{ id: 9.2, name: 'LOLIA 14K Gold CZ Ring Set', category: 'Jewelry', subcategory: 'Rings', price: 11.99, image: 'https://m.media-amazon.com/images/I/615KE+0BjtL._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/4tXGpCZ' },
+{ id: 9.3, name: 'PAVOI 14K Gold Eternity Ring', category: 'Jewelry', subcategory: 'Rings', price: 14.95, image: 'https://m.media-amazon.com/images/I/61peluWYLaL._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/4aILuHz' },
+{ id: 9.4, name: 'KISS WIFE Stackable Knuckle Rings', category: 'Jewelry', subcategory: 'Rings', price: 9.47, image: 'https://m.media-amazon.com/images/I/612XlMoo2wL._AC_SY625_.jpg', affiliateUrl: 'https://amzn.to/47gLNqK' },
+{ id: 9.5, name: 'Non Tarnish Gold Dome Rings', category: 'Jewelry', subcategory: 'Rings', price: 8.99, image: 'https://m.media-amazon.com/images/I/516MS0Wns5L._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/4snAs0t' },
+
+//NECKLACES
+{ id: 10.1, name: 'PAVOI CZ Cross Necklace', category: 'Jewelry', subcategory: 'Necklaces', price: 13.95, image: 'https://m.media-amazon.com/images/I/514P5Dv4b7L._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/407Ru6C' },
+{ id: 10.2, name: 'PAVOI CZ Layered Station Necklace', category: 'Jewelry', subcategory: 'Necklaces', price: 14.95, image: 'https://m.media-amazon.com/images/I/51IlTYv1B9L._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/40xWzVY' },
+{ id: 10.3, name: 'PAVOI Crystal Solitaire Choker', category: 'Jewelry', subcategory: 'Necklaces', price: 13.45, image: 'https://m.media-amazon.com/images/I/61KPcuen7IL._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/4rnd0zD' },
+{ id: 10.4, name: 'PAVOI Dainty Pear Pendant Necklace', category: 'Jewelry', subcategory: 'Necklaces', price: 13.95, image: 'https://m.media-amazon.com/images/I/61XchZnqiaL._AC_SY675_.jpg', affiliateUrl: 'https://amzn.to/4lluDhT' },
+{ id: 10.5, name: 'PAVOI Two Rondelle Pendant Necklace', category: 'Jewelry', subcategory: 'Necklaces', price: 14.95, image: 'https://m.media-amazon.com/images/I/61HfX-rCjwL._AC_SY675_.jpg', affiliateUrl: 'https://amzn.to/4clFVjv' },
+
+//EARRINGS
+{ id: 11.1, name: 'PAVOI Small Chunky Hoops', category: 'Jewelry', subcategory: 'Earrings', price: 13.95, image: 'https://m.media-amazon.com/images/I/51UaON9qgmL._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/4kZOR0p' },
+{ id: 11.2, name: 'PAVOI Teardrop Statement Dangle', category: 'Jewelry', subcategory: 'Earrings', price: 14.95, image: 'https://m.media-amazon.com/images/I/61JT7BvZPYL._AC_SY675_.jpg', affiliateUrl: 'https://amzn.to/4r1lqME' },
+{ id: 11.3, name: 'PAVOI Lightweight Gold Hoops', category: 'Jewelry', subcategory: 'Earrings', price: 17.45, image: 'https://m.media-amazon.com/images/I/61SrZPgy1xL._AC_SY675_.jpg', affiliateUrl: 'https://amzn.to/4kZbpOE' },
+{ id: 11.4, name: 'PAVOI Gold Huggie Ear Cuff', category: 'Jewelry', subcategory: 'Earrings', price: 13.95, image: 'https://m.media-amazon.com/images/I/619KwiJFLPL._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/4aZnHCf' },
+{ id: 11.5, name: 'PAVOI Chunky Open Hoops', category: 'Jewelry', subcategory: 'Earrings', price: 13.95, image: 'https://m.media-amazon.com/images/I/617D3oLZVEL._AC_SY675_.jpg', affiliateUrl: 'https://amzn.to/4u76XSg' },
+
+//BRACELETS
+{ id: 12.1, name: 'PAVOI CZ Tennis Bracelet', category: 'Jewelry', subcategory: 'Bracelets', price: 19.95, image: 'https://m.media-amazon.com/images/I/81AhHdjqgBL._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/4u3jvtQ' },
+{ id: 12.2, name: 'PAVOI Hand Chain Bracelet', category: 'Jewelry', subcategory: 'Bracelets', price: 16.45, image: 'https://m.media-amazon.com/images/I/61bSQgXLc+L._AC_SY675_.jpg', affiliateUrl: 'https://amzn.to/3OSnXvb' },
+{ id: 12.3, name: 'PAVOI Heart Charms Bracelet Set', category: 'Jewelry', subcategory: 'Bracelets', price: 18.95, image: 'https://m.media-amazon.com/images/I/61vn0vI3irL._AC_SY675_.jpg', affiliateUrl: 'https://amzn.to/4aT2865' },
+{ id: 12.4, name: 'PAVOI Paperclip/Figaro Chain Bracelet', category: 'Jewelry', subcategory: 'Bracelets', price: 16.95, image: 'https://m.media-amazon.com/images/I/615uWhm5HsS._AC_SY535_.jpg', affiliateUrl: 'https://amzn.to/4b2Eu7j' },
+{ id: 12.5, name: 'PAVOI CZ Bangle Tennis Bracelet', category: 'Jewelry', subcategory: 'Bracelets', price: 17.95, image: 'https://m.media-amazon.com/images/I/81GnMgh4ooL._AC_SY675_.jpg', affiliateUrl: 'https://amzn.to/46xxfTB' },
+
+//CROSS-BODY BAGS
+{ id: 13.1, name: 'Over Earth Leather Crossbody Bag', category: 'Accessories', subcategory: 'Cross-Body Bags', price: 79.89, image: 'https://m.media-amazon.com/images/I/71DAeBCgVaL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4cmpOlN' },
+{ id: 13.2, name: 'Over Earth Leather Crossbody Bag', category: 'Accessories', subcategory: 'Cross-Body Bags', price: 79.89, image: 'https://m.media-amazon.com/images/I/71NgYOfz9qL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4u3miTQ' },
+{ id: 13.3, name: 'Over Earth Leather Crossbody Bag', category: 'Accessories', subcategory: 'Cross-Body Bags', price: 79.89, image: 'https://m.media-amazon.com/images/I/7120Pf03RnL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/4cTP8Qc' },
+{ id: 13.4, name: 'Over Earth Leather Small Hobo Bag', category: 'Accessories', subcategory: 'Cross-Body Bags', price: 89.78, image: 'https://m.media-amazon.com/images/I/81gI5yJNAxL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/3NbGt18' },
+{ id: 13.5, name: 'Over Earth Leather Small Hobo Bag', category: 'Accessories', subcategory: 'Cross-Body Bags', price: 89.78, image: 'https://m.media-amazon.com/images/I/71XMXwn59bL._AC_SY695_.jpg', affiliateUrl: 'https://amzn.to/40AIO8S' },
+
+  // { id: 14, name: 'Structured Leather Tote', category: 'Handbags', subcategory: 'Totes', price: 450, image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&h=800&fit=crop', affiliateUrl: '#' },
+
 ];
 
 // ==================== STATE ====================
@@ -102,10 +148,26 @@ const newsletterEmail = document.getElementById('newsletterEmail');
 const newsletterMessage = document.getElementById('newsletterMessage');
 const newsletterBtn = document.getElementById('newsletterBtn');
 
+// ==================== SHUFFLE FUNCTION ====================
+function shuffleArray(array) {
+  // Fisher-Yates shuffle algorithm
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 // ==================== INITIALIZE ====================
 function init() {
   lucide.createIcons();
   buildMobileMenu();
+  // Shuffle products randomly
+  const shuffledProducts = shuffleArray(products);
+  // Replace products array with shuffled version for display
+  products.length = 0;
+  products.push(...shuffledProducts);
   renderProducts();
   setupEventListeners();
   setupSearch();
@@ -643,6 +705,3 @@ function setupEventListeners() {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', init);
-
-
-
